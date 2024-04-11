@@ -1,6 +1,14 @@
 import '@/app/ui/global.css';
 import { inter } from '@/app/ui/fonts';
+import { Metadata } from 'next';
  
+export const metadata: Metadata = {
+  title: {
+    template: '%s',
+    default: 'Generator',
+  },
+  description: 'Gemini generator',
+};
 export default function RootLayout({
   children,
 }: {
