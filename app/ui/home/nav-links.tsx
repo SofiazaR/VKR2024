@@ -12,7 +12,6 @@ import clsx from 'clsx';
 // Depending on the size of the application, this would be stored in a database.
 const links = [
   { name: 'Главная', href: '/home', icon: HomeIcon },
-  { name: 'Запросы', href: '/home/prompts', icon: DocumentDuplicateIcon },
 ];
 
 export default function NavLinks() {
