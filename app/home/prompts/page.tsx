@@ -9,7 +9,7 @@ import { Suspense } from 'react';
  
 import { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'Prompts',
+  title: 'Запросы',
 };
 
 export default async function Page({
@@ -26,10 +26,10 @@ export default async function Page({
   return (
     <div className="w-full">
       <div className="flex w-full items-center justify-between">
-        <h1 className={`${lusitana.className} text-2xl`}>Prompts</h1>
+        <h1 className={`${lusitana.className} text-2xl`}>Запросы</h1>
       </div>
-      <div className="mt-4 flex items-center justify-between gap-2 md:mt-8">
-        <Search placeholder="Search prompts..." />
+       <div className="mt-4 flex items-center justify-between gap-2 md:mt-8">
+        <Search placeholder="Найти запрос..." />
         <CreateInvoice />
       </div>
       <Suspense key={query + currentPage} fallback={<InvoicesTableSkeleton />}>
@@ -37,7 +37,7 @@ export default async function Page({
       </Suspense> 
       <div className="mt-5 flex w-full justify-center">
         <Pagination totalPages={totalPages} /> 
-      </div>
-    </div>
+      </div> 
+    </div> 
   );
 }
