@@ -1,6 +1,6 @@
 'use client';
 import {
-  UserGroupIcon,
+  BookmarkIcon,
   HomeIcon,
   DocumentDuplicateIcon,
 } from '@heroicons/react/24/outline';
@@ -12,6 +12,7 @@ import clsx from 'clsx';
 // Depending on the size of the application, this would be stored in a database.
 const links = [
   { name: 'Главная', href: '/home', icon: HomeIcon },
+  { name: 'Избранное', href: '/home/favorite', icon: BookmarkIcon },
 ];
 
 export default function NavLinks() {

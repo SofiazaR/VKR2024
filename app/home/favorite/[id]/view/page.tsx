@@ -1,5 +1,5 @@
-import Form from '@/app/ui/prompts/create-form';
-import Breadcrumbs from '@/app/ui/prompts/breadcrumbs';
+import View from '@/app/ui/favorite/create-form';
+import Breadcrumbs from '@/app/ui/favorite/breadcrumbs';
 import { fetchCustomers } from '@/app/lib/data';
 import { Metadata } from 'next';
  
@@ -13,15 +13,15 @@ export default async function Page() {
     <main>
       <Breadcrumbs
         breadcrumbs={[
-          { label: 'Запросы', href: '/home/prompts' },
+          { label: 'Избранное', href: '/home/favorite' },
           {
-            label: 'Создать запрос',
-            href: '/home/prompts/create',
+            label: 'Изменить',
+            href: '/home/favorite/view',
             active: true,
           },
         ]}
       />
-      <Form customers={customers} />
+      <View customers={customers} />
     </main>
   );
 }

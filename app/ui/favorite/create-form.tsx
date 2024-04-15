@@ -11,7 +11,7 @@ import { Button } from '@/app/ui/button';
 import { useFormState } from 'react-dom';
 import { createInvoice } from '@/app/lib/actions';
 
-export default function Form({ customers }: { customers: CustomerField[] }) {
+export default function View({ customers }: { customers: CustomerField[] }) {
   const initialState = { message: null, errors: {} };
   const [state, dispatch] = useFormState(createInvoice, initialState);
   return (
@@ -115,12 +115,12 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
       </div>
       <div className="mt-6 flex justify-end gap-4">
         <Link
-          href="/home/prompts"
+          href="/home/favorite"
           className="flex h-10 items-center rounded-lg bg-gray-100 px-4 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-200"
         >
           Отмена
         </Link>
-        <Button type="submit">Создать запрос</Button>
+        <Button type="submit">Сохранить</Button>
       </div>
     </form>
   );
