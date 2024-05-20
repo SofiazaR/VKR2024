@@ -12,6 +12,7 @@ import clsx from 'clsx';
 // Depending on the size of the application, this would be stored in a database.
 const links = [
   { name: 'Главная', href: '/home', icon: HomeIcon },
+  { name: 'Шаблоны', href: '/home/template', icon: DocumentDuplicateIcon },
   { name: 'Избранное', href: '/home/favorite', icon: BookmarkIcon },
 ];
 
