@@ -15,8 +15,8 @@ export default async function Page() {
         breadcrumbs={[
           { label: 'Шаблоны', href: '/home/template' },
           {
-            label: 'Base',
-            href: '/home/template/base',
+            label: 'Бизнес',
+            href: '/home/template/business',
             active: true,
           },
         ]}

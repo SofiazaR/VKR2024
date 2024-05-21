@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import Prompt from '@/app/ui/prompt-input';
  
 export const metadata: Metadata = {
-  title: 'Generate',
+  title: 'AIWebBuilder',
 };
 export default async function Page() {
 
