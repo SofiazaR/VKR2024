@@ -3,19 +3,13 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-export default function PromptShine({ placeholder }: { placeholder: string }) {
+export default function PromptBlog({ placeholder }: { placeholder: string }) {
   
     const genAI = new GoogleGenerativeAI("AIzaSyBEN1pF8pt94fSkVyY1Ug7XC_rGPRNM2fU");
     const [promptText, setPromptText] = useState<string>(''); // Состояние для текста в основной textarea
     const [previewText, setPreviewText] = useState<string>(''); // Состояние для текста в textarea с id="htmlInput"
     const [isHtmlInputVisible, setIsHtmlInputVisible] = useState<boolean>(true); // Состояние для отображения/скрытия textarea с id="htmlInput"
   
-    useEffect(() => {
-        fetch('shine.txt')
-            .then(response => response.text())
-            .then(data => setPreviewText(data))
-            .catch(error => console.error('Ошибка при загрузке файла:', error));
-    }, []);
 
     function run(prompt: string) {
       const model = genAI.getGenerativeModel({ model: "gemini-pro"});

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { CreateTemplateBase, CreateTemplateShine } from '@/app/ui/template/button';
+import { CreateTemplateBase, CreateTemplateBlog } from '@/app/ui/template/button';
 
 export default function Template() {
   const [showModal, setShowModal] = useState(false);
@@ -20,20 +20,14 @@ export default function Template() {
           <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
             <div className="p-4 md:w-1/3 sm:mb-0 mb-6">
               <div className="rounded-lg h-64 overflow-hidden">
-              <img alt="content" className="object-cover object-center h-full w-full" src="https://tailwindtemplates.co/_next/image?url=https%3A%2F%2Fapi.tailwindtemplates.co%2Fpublic%2Ffile%2Fshine-tailwind.jpg&w=2048&q=100"/>
+              <img alt="content" className="object-cover object-center h-full w-full" src="https://sun9-53.userapi.com/impg/331JT3SjcnBaPp-4_gvDRVSFUkIvCooQqpabOQ/aa-Eo2sLst4.jpg?size=2115x1266&quality=95&sign=8b462a66d800d110c38d844ae7302da5&type=album" />
               </div>
-              <h2 className="text-xl font-medium title-font text-gray-900 mt-5">Shine</h2>
-              <p className="text-base leading-relaxed mt-2">Шаблон специально разработан для бизнес-сайтов, стартапов, SaaS и веб-приложений. Благодаря всем необходимым элементам и разделам этот одностраничный шаблон поможет вам в создании вашего проекта.</p>
-              <CreateTemplateShine />
+              <h2 className="text-xl font-medium title-font text-gray-900 mt-5">Блог</h2>
+              <p className="text-base leading-relaxed mt-2">Это стильный и функциональный шаблон для создания красивого блога, идеально подходящий как для профессионалов, так и для любителей, желающих поделиться своим опытом и вдохновить других.
+С помощью шаблона вы сможете легко создать привлекательный блог с адаптивным дизайном, разместить фото своих работ, поделиться знаниями и привлечь новых клиентов.</p>
+              <CreateTemplateBlog />
             </div>
-            <div className="p-4 md:w-1/3 sm:mb-0 mb-6">
-              <div className="rounded-lg h-64 overflow-hidden">
-              <img alt="content" className="object-cover object-center h-full w-full" src="https://tailwindtemplates.co/_next/image?url=https%3A%2F%2Fapi.tailwindtemplates.co%2Fpublic%2Ffile%2Fbase-tailwind-css.jpeg&w=2048&q=100"/>
-              </div>
-              <h2 className="text-xl font-medium title-font text-gray-900 mt-5">Base</h2>
-              <p className="text-base leading-relaxed mt-2">Если вам нужен отличный стартовый шаблон для бизнес-сайтов, Base станет идеальным выбором для вас!</p>
-              <CreateTemplateBase />
-            </div>
+            
           </div>
         </div>
       </section>

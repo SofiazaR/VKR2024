@@ -12,10 +12,10 @@ export function CreateTemplateBase() {
     </Link>
   );
 }
-export function CreateTemplateShine() {
+export function CreateTemplateBlog() {
   return (
     <Link
-      href="/home/template/shine"
+      href="/home/template/blog"
      className="text-indigo-500 inline-flex items-center cursor-pointer mt-3">
       <span className="hidden md:block">Создать по шаблону</span>{' '}
       <ArrowRightCircleIcon className="h-5 md:ml-4" />
