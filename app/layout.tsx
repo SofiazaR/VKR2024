@@ -5,9 +5,9 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: {
     template: '%s',
-    default: 'Generator',
+    default: 'AIWebBuilder',
   },
-  description: 'Gemini generator',
+  description: 'Спроектируй пользовательское взаимодействие на веб-сайте за секунды',
 };
 export default function RootLayout({
   children,

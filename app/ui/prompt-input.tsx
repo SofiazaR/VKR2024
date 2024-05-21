@@ -68,39 +68,39 @@ export default function Prompt({ placeholder }: { placeholder: string }) {
       <div className="flex flex-row flex-nowrap gap-4">
   <div className="basis-4/5">
   <textarea
-        className=" block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-        placeholder={placeholder}
-        rows={1}
-        value={promptText}
-        onChange={(e) => setPromptText(e.target.value)}
-      ></textarea>
+  className="block w-full h-12 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+  placeholder={placeholder}
+  value={promptText}
+  onChange={(e) => setPromptText(e.target.value)}
+></textarea>
+
     </div>
-  <div className="basis-1/4">
+  <div className="basis-1">
   <button
-  className="min-height:60px block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+  className="flex items-center gap-5 self-start rounded-lg bg-orange-600 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-orange-400 md:text-base"
   onClick={() => run("Создай сайт на русском языке с использованием HTML и tilwindcss. Сайт должен содержать следующие элементы:Хедер с логотипом и навигацией.Футер с контактной информацией и ссылками на социальные сети. Основной контент, включающий текстовую информацию и изображения. Страница должна быть адаптивной и хорошо выглядеть как на десктопе, так и на мобильных устройствах. Убедитесь, что сайт соответствует принципам юзабилити Нильсена." + promptText)}
 >
   Сгенерировать
 </button>
 </div>
-<div className="basis-1/40">
+<div className="basis-1">
 <button
-            className="min-height:60px block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-            onClick={toggleHtmlInputVisibility}
-            
-          >
-            {isHtmlInputVisible ? (
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            ) : (
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20 12H4" />
-              </svg>
-            )}
-          </button>
-          </div>      
-    </div>
+  className="flex items-center justify-center gap-2 self-start rounded-lg bg-orange-600 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-orange-400 md:text-base whitespace-nowrap"
+  onClick={toggleHtmlInputVisibility}
+>
+  <p>{isHtmlInputVisible ? "Показать код" : "Скрыть код"}</p>
+</button>
+
+
+
+          </div>
+          <div className="basis-1">
+          <button className="flex items-center gap-5 self-start rounded-lg bg-orange-600 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-orange-400 md:text-base"
+ onClick={() => updateLivePreviewInNewWindow(previewText.replace(/^```html\n/, '').replace(/```$/, ''))}>Открыть</button>
+         </div>
+          
+          </div>  
+
           
       </div>
       <div>
@@ -124,10 +124,6 @@ export default function Prompt({ placeholder }: { placeholder: string }) {
               className={`block w-full h-screen rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6`}
             />
           </div>
-          <button className="min-height:60px block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
- onClick={() => updateLivePreviewInNewWindow(previewText.replace(/^```html\n/, '').replace(/```$/, ''))}>Открыть в новом окне</button>
-
-
     </div>
       </div>
     </div>
