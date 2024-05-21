@@ -1,5 +1,5 @@
 
-import Breadcrumbs from '@/app/ui/invoices/breadcrumbs';
+import Breadcrumbs from '@/app/ui/template/breadcrumbs';
 import { Metadata } from 'next';
 import PromptBlog from '@/app/ui/template/prompt-input';
 
