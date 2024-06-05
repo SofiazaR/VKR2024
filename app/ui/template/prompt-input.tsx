@@ -1,5 +1,6 @@
 'use client';
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import { BookmarkIcon } from "@heroicons/react/24/outline";
 import { useState, } from 'react';
 
 
@@ -99,6 +100,13 @@ export default function Prompt({ placeholder }: { placeholder: string }) {
  onClick={() => updateLivePreviewInNewWindow(previewText.replace(/^```html\n/, '').replace(/```$/, ''))}>Открыть</button>
          </div>
           
+         <div className="basis-1">
+          <button
+  className="flex items-center justify-center gap-2 self-start rounded-lg bg-orange-600 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-orange-400 md:text-base whitespace-nowrap"
+>
+<BookmarkIcon className="w-6" />
+</button>
+          </div>
           </div>  
 
           
