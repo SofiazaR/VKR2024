@@ -49,7 +49,7 @@ export default function Template() {
               </div>
               <h2 className="text-xl font-medium title-font text-gray-900 mt-5">Бизнес</h2>
               <p className="text-base leading-relaxed mt-2">Включает главные страницы (Главная, О нас, Услуги, Контакты), а также опциональные разделы (Блог, Галерея), меню для удобной навигации и привлекательный внешний вид.</p>
-              <CreateTemplateBlog />
+              <CreateTemplateBusiness />
             </div>
             
           </div>
